@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
-	
+	//change done to check bulid via jenkins 
 	@Id
 	@GeneratedValue
 	private int id;
