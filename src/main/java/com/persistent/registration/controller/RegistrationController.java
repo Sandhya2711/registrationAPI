@@ -1,18 +1,18 @@
 package com.persistent.registration.controller;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.persistent.registration.model.MatchTb;
 import com.persistent.registration.model.User;
 import com.persistent.registration.service.RegistrationService;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin("https://localhost:4200/loginSuccess")
 public class RegistrationController {
 
 	@Autowired
@@ -56,6 +56,14 @@ public class RegistrationController {
 			throw new Exception("Email id or password is empty !");
 		}
 		return userobj;
+	}
+	
+	@GetMapping(path="/loginSuccess")
+	public List<MatchTb> loginUser() throws Exception
+	{
+		List<MatchTb> listOfMatches = service.fetchAllMatches();
+		
+		return listOfMatches;
 	}
 	
 	
