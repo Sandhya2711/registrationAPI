@@ -13,7 +13,7 @@ public class User {
 	@GeneratedValue
 	private int id;
 	
-	private String emailId;
+	private  emailId;//error added
 	private String username;
 	private String password;
 	public int getId() {
