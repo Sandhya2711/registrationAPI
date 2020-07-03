@@ -12,7 +12,7 @@ import com.persistent.registration.model.User;
 import com.persistent.registration.service.RegistrationService;
 
 @RestController
-@CrossOrigin("https://localhost:4200/loginSuccess")
+@CrossOrigin(origins= "https://localhost:4200")
 public class RegistrationController {
 
 	@Autowired
