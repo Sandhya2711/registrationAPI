@@ -12,7 +12,8 @@ import com.persistent.registration.model.User;
 import com.persistent.registration.service.RegistrationService;
 
 @RestController
-@CrossOrigin(origins= "https://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200")
+
 public class RegistrationController {
 
 	@Autowired
