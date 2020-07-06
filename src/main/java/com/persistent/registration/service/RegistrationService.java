@@ -19,13 +19,15 @@ public class RegistrationService {
 	@Autowired
 	private RegistrationRepository repo;
 	
-	
+	@Autowired
 	private MatchesRepository mRepo;
 	
+	/*
 	public User saveUser(User user)
 	{
 		return repo.save(user);
 	}
+	*/
 	
 	public User fetchUserByEmailId(String emailId)
 	{
