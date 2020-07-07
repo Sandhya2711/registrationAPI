@@ -22,12 +22,12 @@ public class RegistrationService {
 	@Autowired
 	private MatchesRepository mRepo;
 	
-	
-	public User saveUser(User user)
-	{
-		return repo.save(user);
-	}
-	
+	// commentting  saveUser method to see updates(error) after build in jenkins from email
+//	public User saveUser(User user)
+//	{
+//		return repo.save(user);
+//	}
+//	
 	
 	public User fetchUserByEmailId(String emailId)
 	{
